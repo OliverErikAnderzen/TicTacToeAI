@@ -15,5 +15,6 @@ class View:
         pygame.draw.rect(self.screen, color, (cs*x, cs*y, cs, cs))
 
     def render(self):
-        grid_size = self.model.grid_size
-        cell_size = self.model.cell_size
+        self.screen.fill((0, 0, 0))
+        self.draw_segment(1,1,(255,0,0))
+        pygame.display.flip()
