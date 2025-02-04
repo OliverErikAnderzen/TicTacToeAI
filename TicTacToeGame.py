@@ -16,10 +16,10 @@ def TicTacToeGame():
     model = Model(data)
 
     #initialize view
-    view = View(Model)
+    view = View(model)
 
     #initialize controller
-    controller = Controller(Model, View)
+    controller = Controller(model, view)
 
 if __name__ == "__main__":
     TicTacToeGame()
