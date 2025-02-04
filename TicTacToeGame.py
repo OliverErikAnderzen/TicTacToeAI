@@ -21,5 +21,7 @@ def TicTacToeGame():
     #initialize controller
     controller = Controller(model, view)
 
+    controller.run()
+
 if __name__ == "__main__":
     TicTacToeGame()
