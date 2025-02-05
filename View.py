@@ -15,7 +15,11 @@ class View:
         pygame.draw.rect(self.screen, color, (cs*x, cs*y, cs, cs))
 
     def draw_board(self):
-        pass
+        self.draw_segment(0,0,(207,185,151))
+        self.draw_segment(0,2,(207,185,151))
+        self.draw_segment(1,1,(207,185,151))
+        self.draw_segment(2,0,(207,185,151))
+        self.draw_segment(2,2,(207,185,151))
 
     def render(self):
         self.screen.fill((0, 0, 0))
