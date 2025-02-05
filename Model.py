@@ -24,3 +24,4 @@ class Model:
         self.change_turn()
 
     def place_piece(self, position):
+        print(position)
