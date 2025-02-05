@@ -22,6 +22,6 @@ class View:
         self.draw_segment(2,2,(207,185,151))
 
     def render(self):
-        self.screen.fill((0, 0, 0))
-        self.draw_segment(1,1,(255,0,0))
+        self.screen.fill((250, 235, 240))
+        self.draw_board()
         pygame.display.flip()
