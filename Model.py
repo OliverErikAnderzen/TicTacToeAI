@@ -9,6 +9,9 @@ class Model:
         if new_status == True or new_status == False:
             self.game_over = new_status
 
+    def get_game_over(self):
+        return self.game_over
+
     def change_turn(self):
         if self.turn == 'O':
             self.turn = 'X'
