@@ -5,6 +5,10 @@ class View:
         self.model = model
         self.grid_size = model.grid_size
         self.cell_size = model.cell_size
+        self.x_img = pygame.image.load('pieces/x_piece.png')
+        self.o_img = pygame.image.load('pieces/o_piece.png')
+        self.x_img = pygame.transform.scale(self.x_img, (self.cell_size - 20, self.cell_size - 20))
+        self.o_img = pygame.transform.scale(self.o_img, (self.cell_size - 20, self.cell_size - 20))
         self.screen = pygame.display.set_mode(
             (self.grid_size[0] * self.cell_size, self.grid_size[1] * self.cell_size)
         )
