@@ -25,5 +25,13 @@ class Model:
         self.place_piece(position)
         self.change_turn()
 
+    def find_axis_square(self, axis_position):
+        if axis_position < self.cell_size:
+            return 0
+        elif axis_position < self.cell_size * 2:
+            return 1
+        else:
+            return 2
+
     def place_piece(self, position):
         print(position)
