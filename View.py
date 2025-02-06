@@ -25,7 +25,18 @@ class View:
         self.draw_segment(2,0,(207,185,151))
         self.draw_segment(2,2,(207,185,151))
 
+    def draw_pieces(self):
+        rep = self.model.game_representation
+        
+        for row in range(3):
+            for col in range(3):
+                if rep[row][col] == "X":
+                    self.screen.blit(self.x_img, (col * self.cell_size + 10, row * self.cell_size + 10))
+                if rep[row][col] == "O":
+                    self.screen.blit(self.o_img, (col * self.cell_size + 10, row * self.cell_size + 10))
+
     def render(self):
         self.screen.fill((250, 235, 240))
         self.draw_board()
+        self.draw_pieces()
         pygame.display.flip()
