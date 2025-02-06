@@ -35,3 +35,6 @@ class Model:
 
     def place_piece(self, position):
         print(position)
+        square_position = (self.find_axis_square(position[1]), self.find_axis_square(position[0]))
+        self.game_representation[square_position[0]][square_position[1]] = self.turn
+
