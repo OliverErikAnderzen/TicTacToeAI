@@ -38,3 +38,14 @@ class Model:
         square_position = (self.find_axis_square(position[1]), self.find_axis_square(position[0]))
         self.game_representation[square_position[0]][square_position[1]] = self.turn
 
+    def check_win(self):
+        rep = self.game_representation
+
+        #check diagonal win
+        # self.check_diagonal_win()
+
+        #check vertical win
+        # self.check_vertical_win()
+
+        #check horizontal win
+        # self.check_horizontal_win()
