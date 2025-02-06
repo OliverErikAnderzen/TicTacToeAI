@@ -4,6 +4,8 @@ class Model:
         self.grid_size = data["grid_size"]
         self.game_over = False
         self.turn = 'O'
+        self.game_representation = [
+            [None, None, None],[None, None, None],[None, None, None]]
 
     def set_game_over(self, new_status):
         if new_status == True or new_status == False:
