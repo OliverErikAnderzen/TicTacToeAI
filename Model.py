@@ -62,5 +62,5 @@ class Model:
         return False
 
     def check_win(self):
-        return self.check_diagonal_win() and self.check_vertical_win() and self.check_horizontal_win()
+        return self.check_diagonal_win() or self.check_vertical_win() or self.check_horizontal_win()
         
