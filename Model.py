@@ -13,6 +13,10 @@ class Model:
 
     def get_game_over(self):
         return self.game_over
+    
+    def check_game_over(self):
+        if self.check_win():
+            self.set_game_over(True)
 
     def change_turn(self):
         if self.turn == 'O':
