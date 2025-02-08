@@ -12,6 +12,7 @@ class Model:
             self.game_over = new_status
 
     def get_game_over(self):
+        self.check_game_over()
         return self.game_over
     
     def check_game_over(self):
