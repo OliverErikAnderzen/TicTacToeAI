@@ -37,14 +37,23 @@ class Model:
         square_position = (self.find_axis_square(position[1]), self.find_axis_square(position[0]))
         self.game_representation[square_position[0]][square_position[1]] = self.turn
 
-    def check_win(self):
+    def check_diagonal_win(self):
         rep = self.game_representation
+        if rep[0][0] == rep[1][1] and rep[1][1] == rep[2][2] and rep[1][1] != None:
+            return True
+        elif rep[0][2] == rep[1][1] and rep[1][1] == rep[2][0] and rep[1][1] != None:
+            return True
+        return False
 
-        #check diagonal win
-        # self.check_diagonal_win()
 
         #check vertical win
         # self.check_vertical_win()
 
-        #check horizontal win
-        # self.check_horizontal_win()
+        for i in range(3):
+            if rep[0][i] == rep[1][i] and rep[1][i] == rep[2][i] and rep[1][i] != None:
+                return True
+        return False
+
+    def check_win(self):
+        return self.check_diagonal_win() and self.check_vertical_win() and self.check_horizontal_win()
+        
