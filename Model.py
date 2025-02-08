@@ -53,6 +53,8 @@ class Model:
                 return True
         return False
     
+    def check_vertical_win(self):
+        rep = self.game_representation
 
         for i in range(3):
             if rep[0][i] == rep[1][i] and rep[1][i] == rep[2][i] and rep[1][i] != None:
